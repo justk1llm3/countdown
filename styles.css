@@ -9,19 +9,38 @@ body {
     margin: 0;
 }
 
+.progress-circle {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: conic-gradient(#61dafb 0deg, rgba(255, 255, 255, 0.2) 0deg);
+}
+
 .countdown-container {
     text-align: center;
-    background-color: #333;
+    /* background-color: #333; */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px #000000;}
 
 #countdown {
     display: flex;
     justify-content: center;
     gap: 20px;
     font-size: 2em;
+    
 }
 
 .time {
