@@ -23,7 +23,7 @@ const countdown = () => {
     const totalGap = countDate - new Date("July 1, 2024 8:0:0").getTime(); // Total time duration
     const progress = ((totalGap - gap) / totalGap) * 360;
 
-    document.querySelector(".progress-circle").style.background = `conic-gradient(#61dafb ${progress}deg, rgba(255, 255, 255, 0.2) 0)`;
+    document.querySelector(".progress-circle").style.background = `conic-gradient(#FCFAF9 ${progress}deg, rgba(72, 229, 194, 0.2) 0)`;
 };
 
 // Update the countdown every 1 second

@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #282c34;
+    background: linear-gradient(to right, #c94b4b, #4b134f);
     color: white;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: conic-gradient(#61dafb 0deg, rgba(255, 255, 255, 0.2) 0deg);
+    background: conic-gradient(#8A2F4D 0deg, rgba(255, 255, 255, 0.2) 0deg);
 }
 
 .countdown-container {
