@@ -22,10 +22,7 @@ body {
 
 .countdown-container {
     text-align: center;
-    /* background-color: #333; */
     padding: 20px;
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     position: absolute;
     width: 80%;
     height: 80%;
@@ -33,14 +30,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-shadow: 2px 2px 4px #000000;}
+    text-shadow: 2px 2px 4px #000000;
+}
 
 #countdown {
     display: flex;
     justify-content: center;
     gap: 20px;
     font-size: 2em;
-    
 }
 
 .time {
@@ -52,4 +49,39 @@ body {
 .time span {
     font-size: 1.5em;
     font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .progress-circle {
+        width: 600px;
+        height: 600px;
+    }
+    #countdown {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-circle {
+        width: 400px;
+        height: 400px;
+    }
+    #countdown {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-circle {
+        width: 300px;
+        height: 300px;
+    }
+    #countdown {
+        font-size: 1em;
+        gap: 10px;
+    }
+    .time span {
+        font-size: 1.2em;
+    }
 }
