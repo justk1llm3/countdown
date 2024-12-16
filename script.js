@@ -1,9 +1,10 @@
-const countdown = () => {
-    const countDate = new Date("Mar 20, 2025 8:0:0").getTime();
-    const now = new Date().getTime();
-    const gap = countDate - now;
+let selectedDate = new Date(document.getElementById("date-select").value).getTime();
 
-    // Time calculations for days, hours, minutes and seconds
+const countdown = () => {
+    const now = new Date().getTime();
+    const gap = selectedDate - now;
+
+    // Time calculations for days, hours, minutes, and seconds
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
@@ -19,12 +20,18 @@ const countdown = () => {
     document.getElementById("minutes").innerText = textMinute;
     document.getElementById("seconds").innerText = textSecond;
 
-    // Calculate total progress
-    const totalGap = countDate - new Date("July 1, 2024 8:0:0").getTime(); // Total time duration
+    // Calculate total progress (using an arbitrary start date for demonstration)
+    const totalGap = selectedDate - new Date("July 1, 2024 8:0:0").getTime(); // Adjust the start date as needed
     const progress = ((totalGap - gap) / totalGap) * 360;
 
     document.querySelector(".progress-circle").style.background = `conic-gradient(#61dafb ${progress}deg, rgba(255, 255, 255, 0.2) 0)`;
 };
 
-// Update the countdown every 1 second
+// Listen for dropdown changes
+document.getElementById("date-select").addEventListener("change", (event) => {
+    selectedDate = new Date(event.target.value).getTime();
+    countdown(); // Update the countdown immediately when the date changes
+});
+
+// Update the countdown every second
 setInterval(countdown, 1000);
