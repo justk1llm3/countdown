@@ -21,7 +21,7 @@ const countdown = () => {
     document.getElementById("seconds").innerText = textSecond;
 
     // Calculate total progress (using an arbitrary start date for demonstration)
-    const totalGap = selectedDate - new Date("July 1, 2024 8:0:0").getTime(); // Adjust the start date as needed
+    const totalGap = selectedDate - new Date("March 23, 2025 8:0:0").getTime(); // Adjust the start date as needed
     const progress = ((totalGap - gap) / totalGap) * 360;
 
     document.querySelector(".progress-circle").style.background = `conic-gradient(#61dafb ${progress}deg, rgba(255, 255, 255, 0.2) 0)`;
